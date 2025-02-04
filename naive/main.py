@@ -25,11 +25,10 @@ def get_probability(feature, feature_data, label): # Get the probability of "fea
     total = 0
     for applicant in job_applicants:
         if applicant[features.index(feature)] == feature_data and applicant[-1] == label:
-            total += 1
-    if label == "Hire":
-        return total/total_hire
-    elif label == "Reject":
-        return total/total_reject
+            total += 1   
+    if total == 0: # Adding this line of code so that our result will not equal to zero
+        return 1 
+    return total/total_hire if label == "Hire" else total/total_reject
 
 def classify(experience, education_level, interview_score):
     hire_probability = (get_probability("experience", experience, "Hire")) * (get_probability("education_level", education_level, "Hire")) * (get_probability("interview_score", interview_score, "Hire")) * (total_hire/total_applicants)
@@ -43,6 +42,3 @@ education_level = input("Enter Job Applicant's Education Level(Bachelor's, Maste
 interview_score = input("Enter Job Applicant's Interview Score(Low, Medium, High): ")
 
 print(classify(experience, education_level, interview_score))
-
-
-
