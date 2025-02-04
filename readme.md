@@ -1,6 +1,5 @@
-# CS Elec 1A - Computational Science
+# CS Elec 1A - Computational Science, Laboratory Outputs
 ## Laboratory 1 - Home, January 28, 2025
-
-Computing the Linear Regression from given data and showing the graph.
+## Laboratory 2 - Naive, February 04, 2025
 
 - Tolentino, Luis Lloyd P. // 2-BSCS-A
